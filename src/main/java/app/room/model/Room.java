@@ -26,7 +26,7 @@ public class Room {
     private UUID id;
 
     @Column(unique = true)
-    private Integer roomNumber;
+    private String roomNumber;
 
     @Enumerated(value = EnumType.STRING)
     @Column(nullable = false)

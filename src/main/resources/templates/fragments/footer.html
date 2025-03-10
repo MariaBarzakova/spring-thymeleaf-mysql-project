@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer Page</title>
+</head>
+<body>
+<footer th:fragment = "footer">
+    <div class="footer"><p>© 2025 Hotel Ruby Red Rose. All rights reserved.Today is: <span th:text="${#temporals.format(#temporals.createNow(), 'dd-MM-yyyy HH:mm')}"></span></p></div>
+</footer>
+
+</body>
+</html>

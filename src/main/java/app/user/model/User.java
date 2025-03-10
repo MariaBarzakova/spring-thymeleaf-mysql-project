@@ -49,7 +49,7 @@ public class User {
 
     private Boolean active;
 
-    private final LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAt;
 
 }
 

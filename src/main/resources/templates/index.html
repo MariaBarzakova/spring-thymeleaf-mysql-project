@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body>
+<header>
+  <h1>Welcome to Our Hotel</h1>
+</header>
+<main>
+  <section>
+    <h2>Enjoy Your Stay</h2>
+    <p>Experience luxury and comfort with us.</p>
+  </section>
+  <h3>
+    <a class="primary-text" th:href="@{/login}">&nbspLogin&nbsp</a>
+    if you have an account or
+    <a class="primary-text" th:href="@{/register}">&nbspRegister&nbsp</a>
+    now and check available rooms.
+  </h3>
+</main>
+<th:block th:insert="~{fragments/footer-bar::footer}"></th:block>
+</body>
+</html>

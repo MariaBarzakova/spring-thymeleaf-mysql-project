@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+</head>
+<body>
+<header>
+    <div>
+        <th:block th:insert="fragments/nav-bar::nav"></th:block>
+    </div>
+</header>
+<form th:action="@{/register}" th:method="POST" th:object="${registerRequest}">
+    <label for="name">Username:</label>
+    <input type="text" id="name" name="name" required th:field="*{username}">
+    <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Error Here</p>
+
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="password" required th:field="*{password}">
+    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Error Here</p>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required th:field="*{email}">
+    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error Here</p>
+
+    <label for="confirmPassword">ConfirmPassword:</label>
+    <input type="text" id="confirmPassword" name="confirmPassword" required th:field="*{confirmPassword}">
+    <p th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}">Error Here</p>
+
+    <div class="button-holder d-flex justify-content-center">
+        <button type="submit" value="Register">Register</button>
+    </div>
+</form>
+
+</main>
+<th:block th:insert="~{fragments/footer-bar::footer}"></th:block>
+</body>
+</html>

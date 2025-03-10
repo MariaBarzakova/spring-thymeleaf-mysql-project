@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<header>
+    <h1>Welcome to Our Hotel</h1>
+    <div>
+        <th:block th:insert="fragments/nav-bar::nav"></th:block>
+    </div>
+</header>
+<main>
+    <section>
+        <h2 th:text="${'Welcome, ' + user.username}"></h2>
+        <h3>Our selection of rooms and suites</h3>
+        <p><a th:href="@{/room}">Visit The Rooms</a></p>
+        <h4>Hotel information</h4>
+        <nav>
+            <ul>
+                <li>Address: 1 Unknown str., Sofia 1000, Bulgaria</li>
+                <li>Internet: free</li>
+                <li>Check-in: 3 pm / Check-out: 12 pm</li>
+                <li>Smoking policy: Non-smoking public spaces</li>
+            </ul>
+        </nav>
+        <p>Our travelers give their opinion</p>
+    </section>
+    <h3></h3>
+</main>
+<th:block th:insert="fragments/footer-bar::footer"></th:block>
+</body>
+
+</body>
+</html>

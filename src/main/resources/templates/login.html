@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+<header>
+    <div>
+        <th:block th:insert="fragments/nav-bar::nav"></th:block>
+    </div>
+</header>
+<form th:action="@{/login}" th:method="POST" th:object="${loginRequest}">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required th:field="*{username}">
+    <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Error Here</p>
+
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="password" required th:field="*{password}">
+    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Error Here</p>
+
+    <div class="button-holder d-flex justify-content-center">
+        <button type="submit" value="Login">Login</button>
+    </div>
+</form>
+
+</main>
+<th:block th:insert="~{fragments/footer-bar::footer}"></th:block>
+</body>
+</html>
