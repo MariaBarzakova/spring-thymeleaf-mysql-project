@@ -64,15 +64,7 @@ public class IndexController {
         return "redirect:/login";
     }
 
-    @GetMapping("/home")
-    public ModelAndView getHomePage(HttpSession session) {
-        UUID userId = (UUID) session.getAttribute("user_id");
-        User user = userService.getUserById(userId);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("home");
-        modelAndView.addObject("user", user);
-        return modelAndView;
-    }
+
 
     @GetMapping("/logout")
     public String getLogoutPage(HttpSession session) {

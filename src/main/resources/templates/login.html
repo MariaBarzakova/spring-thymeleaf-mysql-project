@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" >
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
 </head>
 <body>
-<header>
-    <div>
-        <th:block th:insert="fragments/nav-bar::nav"></th:block>
-    </div>
-</header>
+<header></header>
 <form th:action="@{/login}" th:method="POST" th:object="${loginRequest}">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required th:field="*{username}">
@@ -25,6 +22,6 @@
 </form>
 
 </main>
-<th:block th:insert="~{fragments/footer-bar::footer}"></th:block>
+<footer th:replace="~{fragments/footer::footer}"></footer>
 </body>
 </html>

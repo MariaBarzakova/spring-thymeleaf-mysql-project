@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" >
 <head>
     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Page</title>
 </head>
 <body>
@@ -11,7 +12,7 @@
 <main>
   <section>
     <h2>Enjoy Your Stay</h2>
-    <p>Experience luxury and comfort with us.</p>
+    <h3>Experience luxury and comfort with us.</h3>
   </section>
   <h3>
     <a class="primary-text" th:href="@{/login}">&nbspLogin&nbsp</a>
@@ -20,6 +21,6 @@
     now and check available rooms.
   </h3>
 </main>
-<th:block th:insert="~{fragments/footer-bar::footer}"></th:block>
+<footer th:replace="~{fragments/footer::footer}"></footer>
 </body>
 </html>
